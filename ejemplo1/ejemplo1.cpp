@@ -85,6 +85,11 @@ void ejemplo1::btAceptar_Click(Win::Event& e)
 
 
 	}
+	if (y == 0 || x == 0) {
+		if (MessageBoxW(L"NO PUEDES UTILIZAR ESE SIMBOLO ", L"ERROR", MB_OK | MB_ICONERROR)) {
+			return;
+		}
+	}
 
 }
 
@@ -110,6 +115,8 @@ void ejemplo1::radioDivision_Click(Win::Event& e)
 {
 	tbxTitulo.Text = L"Division";
 	ddLista.SetSelected(L"Division");
+	
+
 }
 
 void ejemplo1::btLimpiar_Click(Win::Event& e)
